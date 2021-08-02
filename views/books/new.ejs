@@ -1,0 +1,57 @@
+<% layout('layouts/boilerplate') %> 
+<div class="row">
+    <h1 class="text-center"> New Book</h1>
+    <div class="col-6 offset-3">
+        <form class="validated-form" action="/books" method="POST" novalidate enctype="multipart/form-data">
+            <div class="mb-3">
+                <label class="form-label" for="title">Title</label>
+                <input class="form-control" type="text" id="title" name="campground[title]" required>
+                <div class="invalid-feedback">
+                    Field cannot be left empty.
+                </div>
+            </div>
+            <div class="mb-3">
+                <label class="form-label" for="genre">Genre</label>
+                <input class="form-control" type="text" id="genre" name="campground[genre]" required>
+                <div class="invalid-feedback">
+                    Field cannot be left empty.
+                </div>
+            </div>
+            
+            <!-- <div class="mb-3">
+                <label class="form-label" for="image">Image</label>
+                <input type="file" name="image" multiple></input>
+                <div class="invalid-feedback">
+                    Field cannot be left empty.
+                </div> -->
+            <div class="mb-3">
+                <label class="form-label" for="price">Price</label>
+            <div class="input-group">
+                <span class="input-group-text" id="price-label">Rs</span>
+                <input type="text" class="form-control" placeholder="0.0" id="price" aria-label="price" aria-describedby="price-label" name="campground[price]" required>
+                <div class="invalid-feedback">
+                    Field cannot be left empty.
+                </div>
+            </div>
+            </div>
+            <div class="mb-3">
+                <label class="form-label" for="description">Description</label>
+                <textarea class="form-control" type="text" id="description" name="campground[description]" required></textarea>
+                <div class="invalid-feedback">
+                    Field cannot be left empty.
+                </div>
+            </div>
+            <div class="mb-3">
+                <label for="image" class="form-label">Upload images</label>
+                <input class="form-control" type="file" name="image" id="image" multiple>
+            </div>
+            <div class="mb-3">
+                <button class="btn btn-success">Add Book</button>
+            </div>
+            
+        </form>
+        <a href="/books">All Books</a>       
+    </div>
+</div>
+
+
